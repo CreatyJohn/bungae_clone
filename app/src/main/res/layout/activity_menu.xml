@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.main.MenuActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_exit"
+            android:layout_width="26sp"
+            android:layout_height="26sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="12sp"
+            android:background="@drawable/circle_ripple_effect"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전체메뉴"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_margin="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_appbar"/>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_margin="20sp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_popular_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_popular_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="29sp"
+            android:letterSpacing="-0.05"
+            android:text="인기취향/취미"
+            android:textColor="@color/black"
+            android:textSize="22.5sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:layout_width="340sp"
+            android:layout_height="270sp"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_popular_categories">
+
+            <TableRow
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/btn_category_snikerz"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_snikerz_category" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_snikerz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/snikers"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_watch"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_watch" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_watch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/watch"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_starGoods"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_star" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_stargoods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/starGoods"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_cycler"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_rider_cycle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_cycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/cycle"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/btn_category_bike"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_rider_bike" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_motobike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/bike"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_figure"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_figuar" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_figuar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/figuar"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_nintendo"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="11sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_nintendo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_nintendo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/nintendo"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_health"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="11sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_health" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_health"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/health"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/btn_category_soccer"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_soccer" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_soccer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/soccer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_rider"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="11sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_rider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_rider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/electonicBike"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_camping"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camping" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_camping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/camping"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_category_dslr"
+                    android:layout_width="30sp"
+                    android:layout_height="88sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/category_image_size"
+                        android:layout_height="@dimen/category_image_size"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_camera_category" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_dslr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:text="@string/dslr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/category_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_old_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="60sp"
+        android:letterSpacing="-0.05"
+        android:text="중고거래"
+        android:textColor="@color/black"
+        android:textSize="22.5sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_popular_categories" />
+
+    <TableLayout
+        android:layout_width="340sp"
+        android:layout_height="100sp"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_old_categories">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/btn_category_woman"
+                android:layout_width="30sp"
+                android:layout_height="88sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_ripple_effect"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/category_image_size"
+                    android:layout_height="@dimen/category_image_size"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_woman_clothes" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_category_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5sp"
+                    android:text="@string/woman"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/category_textsize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_category_man"
+                android:layout_width="30sp"
+                android:layout_height="88sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_ripple_effect"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/category_image_size"
+                    android:layout_height="@dimen/category_image_size"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_man_clothes" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_category_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5sp"
+                    android:text="@string/man"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/category_textsize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_category_shoes"
+                android:layout_width="30sp"
+                android:layout_height="88sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_ripple_effect"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/category_image_size"
+                    android:layout_height="@dimen/category_image_size"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_shoes" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_category_shoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5sp"
+                    android:text="@string/shoes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/category_textsize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_category_bag"
+                android:layout_width="30sp"
+                android:layout_height="88sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_ripple_effect"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/category_image_size"
+                    android:layout_height="@dimen/category_image_size"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bag" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_category_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5sp"
+                    android:text="@string/bag"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/category_textsize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

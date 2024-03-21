@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "430520446231",
+    "project_id": "bunggeclone",
+    "storage_bucket": "bunggeclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430520446231:android:b78ce6c25ab0ee574f9b52",
+        "android_client_info": {
+          "package_name": "com.softsquared.template.kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430520446231-1iqgtsucd7imlo04qo6l2u027gojfdag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softsquared.template.kotlin",
+            "certificate_hash": "86944f63bd2c49365df3770c299af332c50a000e"
+          }
+        },
+        {
+          "client_id": "430520446231-d8rhcp7749bbr7e8f9ftej5kmnfne4sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDth9FG92ZD90O_xIvsZd0y4Un3QVhhlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430520446231-d8rhcp7749bbr7e8f9ftej5kmnfne4sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

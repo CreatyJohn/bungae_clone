@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".src.main.myPage.SaleProductFragment"
+    android:background="@color/white">
+
+    <HorizontalScrollView
+        android:id="@+id/sv_goods_status"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="15sp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none">
+
+            <RadioGroup
+                android:layout_marginTop="5sp"
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="8sp"
+                    android:background="@drawable/selector_selected"
+                    android:button="@null"
+                    android:checked="true"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:text="전체"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selecter_radio_text"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:background="@drawable/selector_selected"
+                    android:button="@null"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:text="판매중"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selecter_radio_text"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:background="@drawable/selector_selected"
+                    android:button="@null"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:text="예약중"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selecter_radio_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:background="@drawable/selector_selected"
+                    android:button="@null"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:text="판매완료"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selecter_radio_text"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:background="@drawable/selector_selected"
+                    android:button="@null"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:text="광고중"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selecter_radio_text"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:layout_marginEnd="28sp"
+                    android:id="@+id/radioButton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_selected"
+                    android:textColor="@drawable/selecter_radio_text"
+                    android:button="@null"
+                    android:textSize="14.5sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:text="페이가능" />
+            </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_search"
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sv_goods_status"
+        android:background="@drawable/btnmore_radius_background_fill">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_search"
+            android:layout_margin="15sp"
+            android:layout_width="22sp"
+            android:layout_height="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_search_gray" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_search"
+            android:layout_width="260sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:background="@android:color/transparent"
+            android:hint="@string/goodssearch"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightgray"
+            android:textCursorDrawable="@drawable/edit_text_cursor_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_search"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_layoutwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_search">
+
+        <TextView
+            android:id="@+id/tv_goodscount"
+            android:layout_margin="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goodscount"
+            android:textStyle="bold"
+            android:textSize="13.5sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_nine_dots"
+            android:layout_width="17sp"
+            android:layout_height="17sp"
+            android:layout_marginEnd="20sp"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_nine_dots"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_edit_all"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tv_edit_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="@string/editall"
+            android:textColor="@color/darkgray"
+            android:textSize="13.5sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/view_sale"
+            android:layout_width="1sp"
+            android:layout_height="15sp"
+            android:layout_marginEnd="20sp"
+            android:background="@color/lightgray"
+            app:layout_constraintEnd_toStartOf="@id/btn_nine_dots"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_sale"
+            tools:layout_editor_absoluteX="250dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최신순"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="-5sp"
+                android:scaleType="centerCrop"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="match_parent"
+        android:layout_height="350sp"
+        android:layout_marginTop="5sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/emotion_receller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_layoutwo" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_banner2"
+        android:layout_marginTop="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="100sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appCompatImageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

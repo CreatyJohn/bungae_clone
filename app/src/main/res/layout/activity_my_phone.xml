@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/cl_background">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_go_back"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/circle_ripple_effect"
+        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name_plz"
+        android:layout_width="205sp"
+        android:layout_height="123sp"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="4.5sp"
+        android:padding="17sp"
+        android:text="@string/name_plz"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_go_back"/>
+
+    <LinearLayout
+        android:id="@+id/ll_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_plz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/phone_number"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_plz" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_number_plz"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="3sp"
+                android:background="@android:color/transparent"
+                android:hint="@string/example_phoneNumber"
+                android:imeOptions="actionDone"
+                android:textColorHint="@color/lightgray"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_name"
+                android:maxLength="11"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginTop="10sp"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_phone_comapany"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        app:layout_constraintTop_toBottomOf="@id/ll_phone_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_phone_company"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="15sp"
+            android:text="통신사"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_plz" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350sp"
+            android:layout_height="30sp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_phone_company"
+                android:layout_width="280sp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="25sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5sp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="5dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20sp"
+                android:layout_gravity="start"
+                android:layout_toEndOf="@+id/btn_phone_company"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/company_view"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginTop="10sp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_name_plz" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_birth"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        app:layout_constraintTop_toBottomOf="@id/ll_phone_comapany"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/birth"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_plz" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_birth_plz"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="3sp"
+                android:background="@android:color/transparent"
+                android:hint="@string/example"
+                android:imeOptions="actionDone"
+                android:textColorHint="@color/lightgray"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_name"
+                android:maxLength="6"/>
+
+            <View
+                android:id="@+id/view_slash"
+                android:layout_width="8sp"
+                android:layout_height="1sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="17sp"
+                android:background="@color/gray" />
+
+            <EditText
+                android:id="@+id/et_birth_back"
+                android:layout_width="30sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11sp"
+                android:layout_marginTop="3sp"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_name"
+                android:maxLength="1"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="13sp"
+                android:layout_height="13sp"
+                android:layout_marginTop="13sp"
+                android:src="@drawable/shape_circle_darkgray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="13sp"
+                android:layout_height="13sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginStart="1sp"
+                android:src="@drawable/shape_circle_darkgray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="13sp"
+                android:layout_height="13sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginStart="1sp"
+                android:src="@drawable/shape_circle_darkgray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="13sp"
+                android:layout_height="13sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginStart="1sp"
+                android:src="@drawable/shape_circle_darkgray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="13sp"
+                android:layout_height="13sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginStart="1sp"
+                android:src="@drawable/shape_circle_darkgray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="13sp"
+                android:layout_height="13sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginStart="1sp"
+                android:src="@drawable/shape_circle_darkgray" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="147sp"
+                android:layout_height="1sp"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="10sp"
+                android:background="@color/black" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="30sp"
+                android:layout_height="1sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:background="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        app:layout_constraintTop_toBottomOf="@id/ll_birth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/name"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_plz" />
+
+        <EditText
+            android:id="@+id/et_name_plz"
+            android:layout_width="280sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="3sp"
+            android:background="@android:color/transparent"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textCursorDrawable="@drawable/edit_text_cursor_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_name"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+
+        <View
+            android:id="@+id/nameView"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginTop="10sp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_name_plz" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next_register2"
+        android:layout_width="500sp"
+        android:layout_height="50sp"
+        android:background="@drawable/rectangle_ripple_effect"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next_register"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="510sp"
+        android:layout_marginStart="33sp"
+        android:layout_marginEnd="33sp"
+        android:background="@drawable/rectangle_ripple_effect"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_plz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next_register_birth"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="510sp"
+        android:layout_marginStart="33sp"
+        android:layout_marginEnd="33sp"
+        android:background="@drawable/rectangle_ripple_effect"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_plz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next_register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="510sp"
+        android:layout_marginStart="33sp"
+        android:layout_marginEnd="33sp"
+        android:background="@drawable/rectangle_ripple_effect"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_plz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

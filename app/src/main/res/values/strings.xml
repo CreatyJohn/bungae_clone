@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">번개장터.test</string>
+
+    <!-- Naming Rules -->
+    <!-- 도메인명_컴포넌트함축어_용도(=목적) -->
+
+    <!-- 네이버로그인 키 ID -->
+    <string name="naver_client_id">o3UsmTVEYGORAREFn9w_</string>
+    <string name="naver_client_secret">9OWoefm6wA</string>
+
+    <!-- 페이스북로그인 키 ID -->
+    <string name="facebook_app_id">868990234105320</string>
+    <string name="fb_login_protocol_scheme">fb868990234105320</string>
+    <string name="facebook_client_token">ed2f5253de2916a109ac43ca270c2537</string>
+
+    <!-- Common -->
+
+
+    <!-- Main -->
+    <string name="main_btm_nav_home_title">홈</string>
+    <string name="main_btm_nav_my_page_title">마이페이지</string>
+
+    <!-- Home -->
+    <string name="home_btn_try_get_http_method">GET API 보내기</string>
+    <string name="home_btn_try_post_http_method">POST API 보내기</string>
+    <string name="home_et_id">아이디를 입력하세요.</string>
+    <string name="home_et_pw">비밀번호를 입력하세요.</string>
+
+    <!-- MyPage -->
+    <string name="my_page_tv_counter">%1d 번 눌렀습니다.</string>
+    <string name="my_page_btn_counting_number">숫자 세기</string>
+    <string name="anotherLogin">다른 방법으로 로그인</string>
+    <string name="otherLogin">다른 방법으로 로그인</string>
+    <string name="main_btm_nav_my_page_search">검색</string>
+    <string name="main_btm_nav_search">검색</string>
+    <string name="main_btm_nav_regist">등록</string>
+    <string name="main_btm_nav_chat">번개톡</string>
+    <string name="main_btm_nav_profile">MY</string>
+    <string name="name">이름</string>
+    <string name="next">다음</string>
+    <string name="name_plz">이름을\n입력해주세요</string>
+    <string name="birth">생년월일</string>
+    <string name="example">예시: 900101</string>
+    <string name="example_phoneNumber">01012345678</string>
+    <string name="phone_number">휴대폰번호</string>
+    <string name="price">10,000원</string>
+    <string name="goodsinfo">상품정보</string>
+    <string name="profileedit"><u>상점 소개 편집</u></string>
+    <string name="morepoint">번개포인트 최대 230,900원 더 받기</string>
+    <string name="goodssearch">상품을 검색해보세요.</string>
+    <string name="goodscount">상품 0개</string>
+    <string name="editall"><u>일괄편집</u></string>
+    <string name="proCeller">프로상점은 안전결제 수수료 0원! 믿고 거래를 맡겨보세요!</string>
+    <string name="buyinglocal"><u>직거래시 가능 지역</u></string>
+    <string name="postgoodsinfo">- 구매 시기\n- 브랜드/모델명\n- 제품의 상태 (사용감, 하자 유무 등)\n* 서로가 믿고 거래할 수 있도록, 자세한 정보와 다양한 각도의 상품 사진을 올려주세요.\n\n안전하고 건전한 거래 환경을 위해 과학기술정보통신부, 한국인터넷진흥원과 번개장터(주)가 함께합니다.</string>
+    <string name="more"><u>자세히</u></string>
+    <string name="kakaotalkid">혹시 <u>카카오톡 ID</u>를 적으셨나요?</string>
+    <string name="storename">마지막 단계입니다!\n상점명을 입력해주세요</string>
+    <string name="store_info">한글, 영어, 숫자만 사용할 수 있어요. (최대 10자)\n상점명은 고객님의 닉네임으로 사용될 예정이에요.</string>
+    <string name="safeCredit">안전결제 환영</string>
+    <string name="introduceStore">상점에 대해 알 수 있도록 연락가능 시간 및 교환/반품/환불 정책과 유의사항등을 입력해주세요</string>
+    <string name="onlyText">한글, 영어, 숫자만 사용할 수 있어요. (최대 10자)</string>
+    <string name="maxImage">사진을 1장 이상 등록해주세요 (최대12장)</string>
+    <string name="searchPlz">검색어를 입력해주세요</string>
+    <string name="trandSearch">요즘 많이 찾는 검색어</string>
+    <string name="snikers">스니커즈</string>
+    <string name="watch">시계</string>
+    <string name="starGoods">스타굿즈</string>
+    <string name="cycle">자전거</string>
+    <string name="bike">오토바이/스쿠터</string>
+    <string name="figuar">피규어/인형</string>
+    <string name="nintendo">닌텐도/NDS/\nWii</string>
+    <string name="health">헬스/요가/필라\n테스</string>
+    <string name="soccer">축구</string>
+    <string name="electonicBike">전동킥보드/전동\n휠</string>
+    <string name="camping">캠핑</string>
+    <string name="dslr">카메라/DSLR</string>
+    <string name="goodstitle">상품제목</string>
+    <string name="event">이벤트</string>
+    <string name="evnetInfo">미션만 하면 번개포인트 100% 지급</string>
+    <string name="all">전체</string>
+    <string name="since">최근</string>
+    <string name="woman">여성의류</string>
+    <string name="man">남성의류</string>
+    <string name="bag">가방</string>
+    <string name="shoes">신발</string>
+    <string name="ChatSetting"><u>대화설정</u></string>
+    <string name="menuAll">전체메뉴</string>
+
+</resources>

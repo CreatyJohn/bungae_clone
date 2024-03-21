@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context=".src.main.myPage.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/htab_collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:background="@color/white"
+                app:titleEnabled="false"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@color/transparent"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_notice_profile"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginEnd="17sp"
+                        android:background="@drawable/circle_ripple_effect"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_notification_black"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_share_profile"
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginEnd="17sp"
+                        android:background="@drawable/circle_ripple_effect"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_share"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_menu_profile"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginEnd="20sp"
+                        android:background="@drawable/circle_ripple_effect"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ico_dots"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.softsquared.template.kotlin.src.main.myPage.NewScrollView
+            android:id="@+id/main_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_for_scrollview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_marginTop="75sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130sp"
+                    android:background="@color/white"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginEnd="4sp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginTop="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_profile"
+                            android:layout_width="48sp"
+                            android:layout_height="48sp"
+                            android:background="@drawable/radius_circle_shape"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_shopping" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_my_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MY ID"
+                        android:layout_marginTop="18sp"
+                        android:layout_marginStart="8sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ll_image"/>
+
+                    <ImageView
+                        android:id="@+id/iv_greendot"
+                        android:layout_width="10sp"
+                        android:layout_height="10sp"
+                        android:layout_marginStart="8sp"
+                        android:layout_marginTop="5sp"
+                        android:src="@drawable/ic_baseline_circle_green"
+                        app:layout_constraintTop_toBottomOf="@id/tv_my_id"
+                        app:layout_constraintStart_toEndOf="@id/ll_image"
+                        tools:ignore="SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_worked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="접속중"
+                        android:layout_marginStart="2sp"
+                        android:layout_marginTop="2sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/lightgray"
+                        android:textSize="11.5sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_my_id"
+                        app:layout_constraintStart_toEndOf="@id/iv_greendot"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileedit"
+                        android:textSize="12.2sp"
+                        android:layout_marginBottom="54sp"
+                        android:layout_marginEnd="15sp"
+                        android:textColor="@color/darkgray"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/btn_lightning_point"
+                        android:layout_width="157sp"
+                        android:layout_height="42sp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="5sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/btnmore_radius_background">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="9sp"
+                            android:text="번개포인트"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="11sp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="77sp"
+                            android:text="0"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/btn_my_credit"
+                        android:layout_width="157sp"
+                        android:layout_height="42sp"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginEnd="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/btnmore_radius_background">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="9sp"
+                            android:text="내 계좌"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="11sp"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/item_category_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="87sp"
+                            android:src="@drawable/ic_kakao_bank"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_overlay="true"
+                            app:civ_circle_background_color="@color/black" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_middle_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/btn_my_credit">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20sp"
+                        android:layout_marginTop="2sp"
+                        android:layout_marginBottom="20sp"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@+id/sv_category"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="19sp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_lightning_point" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5sp"
+                            android:text="@string/morepoint"
+                            android:textColor="@color/green"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="14sp"
+                            android:layout_height="14sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="0.5sp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_chevron_right" />
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/sv_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="75sp"
+                        android:layout_marginTop="44dp"
+                        android:scrollbars="none"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/ll_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="170sp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginStart="19sp"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="택배"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2sp"
+                                    android:text="신청/관리"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="평점"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_average"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5.0"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="거래내역"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_bought"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="9"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="팔로워"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_follower"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="팔로잉"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_following"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="안전결제"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오픈일"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_regist_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+100"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="75sp"
+                                android:layout_height="75sp"
+                                android:background="@drawable/profile_radius_background"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="19sp"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="본인인증"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_do_auth"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="OK"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="2sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </HorizontalScrollView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:background="@drawable/btnmore_radius_background"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sv_category" >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_event"
+                            android:layout_marginStart="13sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="혜택"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"
+                            android:textSize="12sp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginStart="12sp"
+                            android:layout_width="230sp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@id/tv_event"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/proCeller"
+                            android:textStyle="normal"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:ellipsize="end"
+                            android:textSize="12sp"/>
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="17sp"
+                            android:layout_height="17sp"
+                            android:layout_marginEnd="10sp"
+                            android:background="@drawable/circle_ripple_effect"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_chevron_right_lightgray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_for_tablayout"
+                    android:background="@color/white"
+                    android:layout_marginTop="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/after_login_tablayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginStart="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tabGravity="start"
+                        app:tabIndicatorColor="@color/black"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabIndicatorGravity="bottom"
+                        app:tabIndicatorHeight="3sp"
+                        app:tabInlineLabel="true"
+                        app:tabSelectedTextColor="@color/black"
+                        app:tabTextAppearance="@style/tab_text"
+                        app:tabTextColor="@color/gray">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="판매상품" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상점후기" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="찜목록" />
+
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5sp"
+                        android:layout_marginTop="47.5sp"
+                        android:background="@color/lightgray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.softsquared.template.kotlin.src.main.customview.CustomViewPager
+                    android:id="@+id/after_login_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_marginBottom="175sp"
+                    app:layout_constraintHeight_percent=".9"
+                    app:layout_constraintWidth_percent="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+        </com.softsquared.template.kotlin.src.main.myPage.NewScrollView>
+
+        <View
+            android:id="@+id/view_for_scrollview"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

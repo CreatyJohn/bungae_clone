@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Unchecked -->
+    <item android:state_checked="false">
+        <layer-list>
+            <!-- 배경 -->
+            <item
+                android:drawable="@drawable/btn_radius_light_gray"
+                android:width="245dp"
+                android:height="52dp">
+            </item>
+            <item
+                android:drawable="@drawable/ic_bunpay"
+                android:width="36sp"
+                android:height="17sp"
+                android:start="102dp"
+                android:top="18.5dp">
+            </item>
+            <item
+                android:drawable="@drawable/ic_check_gray"
+                android:width="22dp"
+                android:height="22dp"
+                android:start="210dp"
+                android:top="15dp">
+            </item>
+        </layer-list>
+    </item>
+    <!-- Checked -->
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- 배경 -->
+            <item
+                android:drawable="@drawable/btn_radius_light_red"
+                android:width="245dp"
+                android:height="52dp">
+            </item>
+            <item
+                android:drawable="@drawable/ic_bunpay"
+                android:width="36sp"
+                android:height="17sp"
+                android:start="102dp"
+                android:top="18.5dp">
+            </item>
+            <item
+                android:drawable="@drawable/ic_check_red"
+                android:width="22dp"
+                android:height="22dp"
+                android:start="210dp"
+                android:top="15dp">
+            </item>
+        </layer-list>
+    </item>
+</selector>

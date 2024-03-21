@@ -1,0 +1,13 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+android:color="@color/lightgray"> <!-- Ripple Effect 클릭시 색상 -->
+
+<!-- 배경색 -->
+<item android:id="@android:id/background"
+    android:gravity="center">
+    <shape>
+        <solid android:color="@color/pink"/>
+        <corners
+            android:radius="5sp"/>
+    </shape>
+</item>
+</ripple>
